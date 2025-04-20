@@ -14,51 +14,145 @@
     * {
       font-family: 'Yekan', Tahoma, sans-serif;
     }
+    body {
+      background-color: #fafafa;
+      color: #333;
+      line-height: 1.8;
+    }
+    .sticky-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+    }
     .team-names {
       text-align: left;
       font-size: 1.0rem;
       line-height: 1.5;
     }
+    /* Minimalist design elements */
+    .section-card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      padding: 2rem;
+      margin-bottom: 2rem;
+      transition: all 0.2s ease;
+    }
+    .section-card:hover {
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+      transform: translateY(-2px);
+    }
     /* Enhanced heading styles */
     h2 {
-      font-size: 2.25rem !important;
+      font-size: 2rem !important;
       font-weight: 700 !important;
-      color: #0056b3 !important;
+      color: #2c3e50 !important;
       padding-bottom: 0.5rem;
-      margin-top: 2rem;
+      margin-top: 1rem;
       margin-bottom: 1.5rem;
-      border-bottom: 2px solid #0056b3;
+      position: relative;
+    }
+    h2:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background-color: #3498db;
     }
     h3 {
-      font-size: 1.75rem !important;
+      font-size: 1.5rem !important;
       font-weight: 600 !important;
-      color: #0069d9 !important;
+      color: #34495e !important;
       margin-top: 1.5rem;
       margin-bottom: 1rem;
     }
     h4 {
-      font-size: 1.4rem !important;
+      font-size: 1.25rem !important;
       font-weight: 600 !important;
-      color: #0077e6 !important;
+      color: #34495e !important;
       margin-top: 1.25rem;
       margin-bottom: 0.75rem;
     }
     strong {
-      font-size: 1.1rem;
-      color: #0056b3;
+      font-weight: 600;
+      color: #2c3e50;
     }
-    .box {
-      border: 1px solid #dee2e6;
-      border-right: 4px solid #0056b3;
+    /* Clean data visualization containers */
+    .viz-container {
+      background-color: white;
       border-radius: 8px;
-      padding: 1.25rem;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
       margin-bottom: 1.5rem;
+    }
+    .viz-header {
+      padding: 1rem;
+      border-bottom: 1px solid #eee;
+      font-weight: 600;
+      color: #2c3e50;
       background-color: #f8f9fa;
     }
-    .box h3 {
-      margin-top: 0;
+    .viz-body {
+      padding: 0;
+    }
+    /* Method info boxes */
+    .method-box {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      padding: 1.5rem;
       margin-bottom: 1rem;
-      color: #0056b3 !important;
+      border-left: 3px solid #3498db;
+    }
+    .method-box h3 {
+      margin-top: 0;
+      color: #2c3e50 !important;
+      font-size: 1.3rem !important;
+    }
+    /* Method description styling */
+    .method-description {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      border-radius: 8px;
+      background-color: rgba(240, 249, 255, 0.7);
+    }
+    .method-title {
+      display: inline-block;
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: #2c3e50;
+      margin-bottom: 0.5rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 4px;
+      background-color: #e3f2fd;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    }
+    .method-title.explanation {
+      background-color: #e3f2fd;
+      border-right: 3px solid #2196f3;
+    }
+    .method-title.usage {
+      background-color: #e8f5e9;
+      border-right: 3px solid #4caf50;
+    }
+    .method-title.limitations {
+      background-color: #fef5e7;
+      border-right: 3px solid #f39c12;
+    }
+    /* Year labels for cluster maps */
+    .year-label {
+      background-color: #2c3e50;
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 600;
+      padding: 0.5rem 1.5rem;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 0.75rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
   </style>
 </head>
@@ -83,154 +177,220 @@
   </header>
   
   <main class="container">
-    <section class="mb-5">
+    <section class="section-card">
       <h2 class="mb-3">مقدمه</h2>
       <p>
         در این تحلیل، با توجه به فقدان روش‌های مؤثر برای شناسایی مقاصد گردشگری در کشور، بر آن شدیم تا با رویکردی جامع به بررسی این موضوع بپردازیم. در گام‌های ابتدایی، با تحلیل‌های پایه به شناسایی مقاصد سفر، الگوهای مسافرتی و حجم تردد مسافران می‌پردازیم و در ادامه، با به‌کارگیری اصلاحات تدریجی در رویکرد، به تحلیلی کامل‌تر و جامع‌تر خواهیم رسید.
       </p>
     </section>
 
-    <section class="mb-5">
+    <section class="section-card">
       <h2 class="mb-3">نمودار دایره‌ای ترافیک ورودی و خروجی استان‌ها
       </h2>
       <div class="row">
-        <div class="col-md-6 mb-4">
-          <h4>ترافیک کل</h4>
-          <div class="ratio ratio-1x1">
+        <div class="col-md-6 mb-4 viz-container">
+          <div class="viz-header">ترافیک کل</div>
+          <div class="viz-body ratio ratio-1x1">
             <iframe src="results/regional_traffic_pie.html" frameborder="0"></iframe>
           </div>
         </div>
-        <div class="col-md-6 mb-4">
-          <h4>نسبت به جمعیت</h4>
-          <div class="ratio ratio-1x1">
+        <div class="col-md-6 mb-4 viz-container">
+          <div class="viz-header">نسبت به جمعیت</div>
+          <div class="viz-body ratio ratio-1x1">
             <iframe src="results/regional_traffic_pie_normalized.html" frameborder="0"></iframe>
           </div>
         </div>
       </div>
-      <p>
-        <strong>توضیح روش:</strong> در این روش، مجموع ترددهای ورودی و خروجی هر استان طی یک بازه زمانی مشخص محاسبه شده و به‌صورت دو نمودار دایره‌ای نمایش داده می‌شود: یکی بر اساس مقدار خام تردد و دیگری نرمال‌شده نسبت به جمعیت استان. نرمال‌سازی امکان مقایسه منصفانه‌تر بین استان‌ها با جمعیت‌های متفاوت را فراهم می‌سازد.
-      </p>
-      <p>
-        <strong>کاربرد در گردشگری:</strong> افزایش حجم کلی تردد می‌تواند به‌عنوان یک شاخص اولیه برای جذب گردشگر در نظر گرفته شود، چرا که معمولاً ورود مسافران منجر به افزایش رفت‌وآمد در منطقه می‌شود.
-
-      </p>
-      <p>
-        <strong>محدودیت‌ها:</strong> این شاخص علاوه بر به حساب آوردن شهرهای میانی، شامل تمامی انواع سفر، از جمله سفرهای کاری، روزمره یا با اهداف غیرگردشگری نیز می‌شود. بنابراین تفکیک دقیق گردشگران از دیگر مسافران ممکن نیست و باید این موضوع در تحلیل‌ها مد نظر قرار گیرد.
-      </p>
+      <div class="method-description">
+        <span class="method-title explanation">توضیح روش</span>
+        <p class="text-gray-700">
+          در این روش، مجموع ترددهای ورودی و خروجی هر استان طی یک بازه زمانی مشخص محاسبه شده و به‌صورت دو نمودار دایره‌ای نمایش داده می‌شود: یکی بر اساس مقدار خام تردد و دیگری نرمال‌شده نسبت به جمعیت استان. نرمال‌سازی امکان مقایسه منصفانه‌تر بین استان‌ها با جمعیت‌های متفاوت را فراهم می‌سازد.
+        </p>
+      </div>
+      <div class="method-description">
+        <span class="method-title usage">کاربرد در گردشگری</span>
+        <p class="text-gray-700">
+          افزایش حجم کلی تردد می‌تواند به‌عنوان یک شاخص اولیه برای جذب گردشگر در نظر گرفته شود، چرا که معمولاً ورود مسافران منجر به افزایش رفت‌وآمد در منطقه می‌شود.
+        </p>
+      </div>
+      <div class="method-description">
+        <span class="method-title limitations">محدودیت‌ها</span>
+        <p class="text-gray-700">
+          این شاخص علاوه بر به حساب آوردن شهرهای میانی، شامل تمامی انواع سفر، از جمله سفرهای کاری، روزمره یا با اهداف غیرگردشگری نیز می‌شود. بنابراین تفکیک دقیق گردشگران از دیگر مسافران ممکن نیست و باید این موضوع در تحلیل‌ها مد نظر قرار گیرد.
+        </p>
+      </div>
     </section>
 
-    <section class="mb-5">
+    <section class="section-card">
       <h2 class="mb-3">نمودار تغییرات ورودی به شهرها در بازه‌های شش‌ماهه
       </h2>
-      <div class="ratio ratio-16x9">
-        <iframe src="results/city_entries_6M.html" frameborder="0"></iframe>
+      <div class="viz-container">
+        <div class="viz-body ratio ratio-16x9">
+          <iframe src="results/city_entries_6M.html" frameborder="0"></iframe>
+        </div>
       </div>
-      <p>
-        <strong>توضیح روش:</strong> در این تحلیل، تعداد ورودی افراد به هر شهر در بازه‌های شش‌ماهه ثبت شده و به‌صورت نمودار زمانی نمایش داده می‌شود. این رویکرد امکان بررسی روندهای فصلی و تغییرات در حجم تردد را فراهم می‌سازد.
-
-      </p>
-      <p>
-        <strong>کاربرد در گردشگری:</strong> با استفاده از این روش، می‌توان تغییرات فصلی در میزان سفرها را رصد کرد و زمان‌های اوج یا رکود گردشگری را شناسایی نمود؛ برای مثال، افزایش ورودی در فصل تابستان می‌تواند نشانه‌ای از رشد گردشگری تفریحی در آن دوره باشد.
-
-
-      </p>
-      <p>
-        <strong>محدودیت‌ها:</strong> این شاخص تنها ورود افراد به شهر را نشان می‌دهد، بدون آن‌که بتواند اهداف سفر را مشخص کند؛ در نتیجه، نمی‌توان به‌طور دقیق تشخیص داد که چه میزان از ترددها مربوط به گردشگران واقعی است. همچنین در برخی موارد، ورود ثبت‌شده ممکن است ناشی از عبور ترانزیتی، تعویض مسیر، یا توقف‌های کوتاه باشد که لزوماً به معنی سفر به مقصد آن شهر نیست و می‌تواند در تحلیل نهایی ایجاد انحراف کند. 
-      </p>
+      <div class="method-description">
+        <span class="method-title explanation">توضیح روش</span>
+        <p class="text-gray-700">
+          در این تحلیل، تعداد ورودی افراد به هر شهر در بازه‌های شش‌ماهه ثبت شده و به‌صورت نمودار زمانی نمایش داده می‌شود. این رویکرد امکان بررسی روندهای فصلی و تغییرات در حجم تردد را فراهم می‌سازد.
+        </p>
+      </div>
+      <div class="method-description">
+        <span class="method-title usage">کاربرد در گردشگری</span>
+        <p class="text-gray-700">
+          با استفاده از این روش، می‌توان تغییرات فصلی در میزان سفرها را رصد کرد و زمان‌های اوج یا رکود گردشگری را شناسایی نمود؛ برای مثال، افزایش ورودی در فصل تابستان می‌تواند نشانه‌ای از رشد گردشگری تفریحی در آن دوره باشد.
+        </p>
+      </div>
+      <div class="method-description">
+        <span class="method-title limitations">محدودیت‌ها</span>
+        <p class="text-gray-700">
+          این شاخص تنها ورود افراد به شهر را نشان می‌دهد، بدون آن‌که بتواند اهداف سفر را مشخص کند؛ در نتیجه، نمی‌توان به‌طور دقیق تشخیص داد که چه میزان از ترددها مربوط به گردشگران واقعی است. همچنین در برخی موارد، ورود ثبت‌شده ممکن است ناشی از عبور ترانزیتی، تعویض مسیر، یا توقف‌های کوتاه باشد که لزوماً به معنی سفر به مقصد آن شهر نیست و می‌تواند در تحلیل نهایی ایجاد انحراف کند.
+        </p>
+      </div>
     </section>
     
-    <section class="mb-5">
+    <section class="section-card">
       <h2 class="mb-3">نمودار تفاضل ورودی و خروجی شهرها
       </h2>
-      <div class="ratio ratio-16x9">
-        <iframe src="results/imbalance.html" frameborder="0"></iframe>
+      <div class="viz-container">
+        <div class="viz-body ratio ratio-16x9">
+          <iframe src="results/imbalance.html" frameborder="0"></iframe>
+        </div>
       </div>
-      <p>
-        <strong>توضیح روش:</strong> توضیح روش:
-        در این رویکرد، اختلاف تعداد ورودی‌ها و خروجی‌ها برای هر شهر محاسبه می‌شود تا مناطق با خالص ورود یا خروج مسافر شناسایی شوند. این تحلیل تصویری از جابه‌جایی نسبی جمعیت در سطح شهرها ارائه می‌دهد.        
-      </p>
-      <p>
-        <strong>کاربرد در گردشگری:</strong> مقادیر مثبت می‌توانند نشان‌دهنده ورود خالص گردشگران و افزایش موقت جمعیت در یک شهر باشند؛ به‌ویژه در مناطق گردشگرپذیر که در دوره‌هایی خاص شاهد افزایش مسافران هستند.
-
-      </p>
-      <p>
-        <strong>محدودیت‌ها:</strong> این شاخص نرمال‌سازی نشده و تحت تأثیر مستقیم اندازه جمعیت و حجم کلی تردد هر شهر قرار دارد. همچنین به‌دلیل حساسیت بالا، خطاهای کوچک در داده‌های ورودی می‌توانند تأثیر چشم‌گیری در نتایج نهایی داشته باشند و تفسیر نمودار را دشوار کنند.
-      </p>
+      <div class="method-description">
+        <span class="method-title explanation">توضیح روش</span>
+        <p class="text-gray-700">
+          در این رویکرد، اختلاف تعداد ورودی‌ها و خروجی‌ها برای هر شهر محاسبه می‌شود تا مناطق با خالص ورود یا خروج مسافر شناسایی شوند. این تحلیل تصویری از جابه‌جایی نسبی جمعیت در سطح شهرها ارائه می‌دهد.        
+        </p>
+      </div>
+      <div class="method-description">
+        <span class="method-title usage">کاربرد در گردشگری</span>
+        <p class="text-gray-700">
+          مقادیر مثبت می‌توانند نشان‌دهنده ورود خالص گردشگران و افزایش موقت جمعیت در یک شهر باشند؛ به‌ویژه در مناطق گردشگرپذیر که در دوره‌هایی خاص شاهد افزایش مسافران هستند.
+        </p>
+      </div>
+      <div class="method-description">
+        <span class="method-title limitations">محدودیت‌ها</span>
+        <p class="text-gray-700">
+          این شاخص نرمال‌سازی نشده و تحت تأثیر مستقیم اندازه جمعیت و حجم کلی تردد هر شهر قرار دارد. همچنین به‌دلیل حساسیت بالا، خطاهای کوچک در داده‌های ورودی می‌توانند تأثیر چشم‌گیری در نتایج نهایی داشته باشند و تفسیر نمودار را دشوار کنند.
+        </p>
+      </div>
     </section>
     
-    <section class="mb-5">
+    <section class="section-card">
       <h2 class="mb-3">نقشه‌های کلاسترینگ مراکز استان‌ها</h2>
       <div class="row">
         <div class="col-md-6 mb-4">
-          <h4>سال ۱۳۹۸</h4>
-          <div class="ratio ratio-1x1">
-            <img src="results/1398_cluster.png" class="img-fluid" alt="کلاسترینگ ۱۳۹۸">
+          <div class="viz-container">
+            <div class="viz-header">
+              <span class="year-label">سال ۱۳۹۸</span>
+            </div>
+            <div class="viz-body ratio ratio-1x1">
+              <img src="results/1398_cluster.png" class="img-fluid" alt="کلاسترینگ ۱۳۹۸">
+            </div>
           </div>
         </div>
         <div class="col-md-6 mb-4">
-          <h4>سال ۱۳۹۹</h4>
-          <div class="ratio ratio-1x1">
-            <img src="results/1399_cluster.png" class="img-fluid" alt="کلاسترینگ ۱۳۹۹">
+          <div class="viz-container">
+            <div class="viz-header">
+              <span class="year-label">سال ۱۳۹۹</span>
+            </div>
+            <div class="viz-body ratio ratio-1x1">
+              <img src="results/1399_cluster.png" class="img-fluid" alt="کلاسترینگ ۱۳۹۹">
+            </div>
           </div>
         </div>
         <div class="col-md-6 mb-4">
-          <h4>سال ۱۴۰۰</h4>
-          <div class="ratio ratio-1x1">
-            <img src="results/1400_cluster.png" class="img-fluid" alt="کلاسترینگ ۱۴۰۰">
+          <div class="viz-container">
+            <div class="viz-header">
+              <span class="year-label">سال ۱۴۰۰</span>
+            </div>
+            <div class="viz-body ratio ratio-1x1">
+              <img src="results/1400_cluster.png" class="img-fluid" alt="کلاسترینگ ۱۴۰۰">
+            </div>
           </div>
         </div>
         <div class="col-md-6 mb-4">
-          <h4>سال ۱۴۰۱</h4>
-          <div class="ratio ratio-1x1">
-            <img src="results/1401_cluster.png" class="img-fluid" alt="کلاسترینگ ۱۴۰۱">
+          <div class="viz-container">
+            <div class="viz-header">
+              <span class="year-label">سال ۱۴۰۱</span>
+            </div>
+            <div class="viz-body ratio ratio-1x1">
+              <img src="results/1401_cluster.png" class="img-fluid" alt="کلاسترینگ ۱۴۰۱">
+            </div>
           </div>
         </div>
       </div>
-      <p>
-        <strong>توضیح روش:</strong> برای هر مرکز استان، یک بردار ۲۴‌بعدی شامل مجموع ترددهای ورودی و خروجی ماهانه (۱۲ ماه × ۲) ساخته می‌شود. پس از نرمال‌سازی این بردارها برای حذف اثر مقیاس، استان‌هایی با الگوهای زمانی مشابه تردد، با استفاده از الگوریتم‌های خوشه‌بندی در گروه‌هایی مشترک قرار می‌گیرند. نتیجه به‌صورت نقشه‌هایی از گروه‌های مشابه نمایش داده می‌شود.
-      </p>
-      <p>
-        <strong>کاربرد در گردشگری:</strong> استان‌هایی که در یک گروه قرار می‌گیرند، احتمالاً از نظر الگوی زمانی تردد (فصلی یا ماهانه) مشابه یکدیگر هستند. این می‌تواند نشان‌دهنده شباهت در رفتار گردشگری، فصل‌های اوج سفر یا نوع جذب مسافر باشد و به طراحی سیاست‌های منطقه‌ای کمک کند.
-      </p>
-      <p>
-        <strong>محدودیت‌ها:</strong> از آن‌جا که تمام بردارها نرمال‌سازی شده‌اند، حجم واقعی تردد در تحلیل لحاظ نمی‌شود؛ در نتیجه، استان‌های پرتردد و کم‌تردد ممکن است در یک گروه قرار گیرند. بنابراین این روش برای شناسایی مقاصد اصلی گردشگری مناسب نیست، بلکه صرفاً الگوهای زمانی تردد را مقایسه می‌کند.
-      </p>
+      <div class="method-description">
+        <span class="method-title explanation">توضیح روش</span>
+        <p class="text-gray-700">
+          برای هر مرکز استان، یک بردار ۲۴‌بعدی شامل مجموع ترددهای ورودی و خروجی ماهانه (۱۲ ماه × ۲) ساخته می‌شود. پس از نرمال‌سازی این بردارها برای حذف اثر مقیاس، استان‌هایی با الگوهای زمانی مشابه تردد، با استفاده از الگوریتم‌های خوشه‌بندی در گروه‌هایی مشترک قرار می‌گیرند. نتیجه به‌صورت نقشه‌هایی از گروه‌های مشابه نمایش داده می‌شود.
+        </p>
+      </div>
+      <div class="method-description">
+        <span class="method-title usage">کاربرد در گردشگری</span>
+        <p class="text-gray-700">
+          استان‌هایی که در یک گروه قرار می‌گیرند، احتمالاً از نظر الگوی زمانی تردد (فصلی یا ماهانه) مشابه یکدیگر هستند. این می‌تواند نشان‌دهنده شباهت در رفتار گردشگری، فصل‌های اوج سفر یا نوع جذب مسافر باشد و به طراحی سیاست‌های منطقه‌ای کمک کند.
+        </p>
+      </div>
+      <div class="method-description">
+        <span class="method-title limitations">محدودیت‌ها</span>
+        <p class="text-gray-700">
+          از آن‌جا که تمام بردارها نرمال‌سازی شده‌اند، حجم واقعی تردد در تحلیل لحاظ نمی‌شود؛ در نتیجه، استان‌های پرتردد و کم‌تردد ممکن است در یک گروه قرار گیرند. بنابراین این روش برای شناسایی مقاصد اصلی گردشگری مناسب نیست، بلکه صرفاً الگوهای زمانی تردد را مقایسه می‌کند.
+        </p>
+      </div>
     </section>
     
-    <section class="mb-5">
+    <section class="section-card">
       <h2 class="mb-3">میانگین تردد استان‌ها</h2>
-      <div class="ratio ratio-16x9">
-        <iframe src="results/Taverage.html" frameborder="0"></iframe>
+      <div class="viz-container">
+        <div class="viz-body ratio ratio-16x9">
+          <iframe src="results/Taverage.html" frameborder="0"></iframe>
+        </div>
       </div>
-      <p>
-        <strong>توضیح روش:</strong> در این نقشه، میانگین تردد در استان‌های مختلف کشور نمایش داده شده است. رنگ‌های متفاوت نشان‌دهنده سطوح مختلف تردد در هر منطقه است.
-      </p>
+      <div class="method-description">
+        <span class="method-title explanation">توضیح روش</span>
+        <p class="text-gray-700">
+          در این نقشه، میانگین تردد در استان‌های مختلف کشور نمایش داده شده است. رنگ‌های متفاوت نشان‌دهنده سطوح مختلف تردد در هر منطقه است.
+        </p>
+      </div>
     </section>
     
-    <section class="mb-5">
+    <section class="section-card">
       <h2 class="mb-3">میانه تردد استان‌ها</h2>
-      <div class="ratio ratio-16x9">
-        <iframe src="results/Tmedian.html" frameborder="0"></iframe>
+      <div class="viz-container">
+        <div class="viz-body ratio ratio-16x9">
+          <iframe src="results/Tmedian.html" frameborder="0"></iframe>
+        </div>
       </div>
-      <p>
-        <strong>توضیح روش:</strong> در این نقشه، میانه تردد در استان‌های مختلف کشور نمایش داده شده است. استفاده از میانه به جای میانگین می‌تواند تصویر دقیق‌تری از وضعیت معمول تردد ارائه دهد، زیرا میانه کمتر تحت تأثیر داده‌های پرت قرار می‌گیرد.
-      </p>
+      <div class="method-description">
+        <span class="method-title explanation">توضیح روش</span>
+        <p class="text-gray-700">
+          در این نقشه، میانه تردد در استان‌های مختلف کشور نمایش داده شده است. استفاده از میانه به جای میانگین می‌تواند تصویر دقیق‌تری از وضعیت معمول تردد ارائه دهد، زیرا میانه کمتر تحت تأثیر داده‌های پرت قرار می‌گیرد.
+        </p>
+      </div>
     </section>
     
-    <section class="mb-5">
+    <section class="section-card">
       <h2 class="mb-3">درصد تردد استان‌ها</h2>
-      <div class="ratio ratio-16x9">
-        <iframe src="results/Tpercent.html" frameborder="0"></iframe>
+      <div class="viz-container">
+        <div class="viz-body ratio ratio-16x9">
+          <iframe src="results/Tpercent.html" frameborder="0"></iframe>
+        </div>
       </div>
+      <div class="method-description">
+        <span class="method-title explanation">توضیح روش</span>
+        <p class="text-gray-700">
       <p>
-        <strong>توضیح روش:</strong> این نقشه، درصد تردد هر استان نسبت به کل تردد کشور را نشان می‌دهد. با این روش می‌توان سهم هر استان در جذب و تولید سفر را به صورت نسبی مشاهده کرد.
+        این نقشه، درصد تردد هر استان نسبت به کل تردد کشور را نشان می‌دهد. با این روش می‌توان سهم هر استان در جذب و تولید سفر را به صورت نسبی مشاهده کرد.
       </p>
+      </div>
     </section>
     
-    <section class="mb-5">
+    <section class="section-card">
       <h2 class="mb-3">روش تحلیل</h2>
       
-      <div class="box mb-4">
+      <div class="method-box mb-4">
         <h3>روش پایه</h3>
         <p>
             <strong>ارزش توریستی = (میانگین زمان خروجی‌ها) − (میانگین زمان ورودی‌ها)</strong><br>
@@ -248,7 +408,7 @@
         </div>
       </div>
 
-      <div class="box mb-4">
+      <div class="method-box mb-4">
         <h3>بازه‌های نرمال چیست؟</h3>
         <ul>
             <li>روزهای عادی (مثلاً دوشنبه‌ها) که <u>در شروع و پایان آنها تعطیلی وجود ندارد</u>.</li>
@@ -257,7 +417,7 @@
         </ul>
       </div>
 
-      <div class="box mb-4">
+      <div class="method-box mb-4">
         <h3>نسخه دقیق‌تر</h3>
         <ul>
             <li><strong>حذف داده‌های نامتعادل:</strong>
@@ -274,7 +434,7 @@
         </ul>
       </div>
 
-      <div class="box mb-4">
+      <div class="method-box mb-4">
         <h3>مثال</h3>
         <p>
             در یک بازه نرمال:<br>
@@ -284,7 +444,7 @@
         </p>
       </div>
 
-      <div class="box mb-4">
+      <div class="method-box mb-4">
         <h3>چرا این روش دقیق است؟</h3>
         <ul>
             <li>مقایسه‌ی هوشمندانه بین رفتار گردشگران ورودی و خروجی.</li>
@@ -294,17 +454,19 @@
       </div>
     </section>
     
-    <section class="mb-5">
+    <section class="section-card">
       <h2 class="mb-3">مقاصد گردشگری فصلی</h2>
-      <div class="ratio ratio-16x9">
-        <iframe src="results/Season.html" frameborder="0"></iframe>
+      <div class="viz-container">
+        <div class="viz-body ratio ratio-16x9">
+          <iframe src="results/Season.html" frameborder="0"></iframe>
+        </div>
       </div>
       <p>
         علاوه بر شهرهایی که مشاهده شدند مقاصد گردشگری در کل سال هستند، شهرهایی نیز وجود دارند که تنها به‌صورت فصلی مورد توجه گردشگران قرار می‌گیرند. این مقاصد معمولاً کمتر شناخته‌ شده‌اند و امیدواریم سفر در فصل مناسب به آن‌ها، تجربه‌ای شیرین و متفاوت برایتان رقم بزند.
       </p>
     </section>
     
-    <section class="mb-5">
+    <section class="section-card">
       <h2 class="mb-3">منابع</h2>
       <ul class="list-group list-group-flush">
         <li class="list-group-item"><a href="https://141.ir/" target="_blank">سامانه اطلاعات راه‌های کشور (۱۴۱)</a></li>
@@ -315,11 +477,11 @@
     </section>
   </main>
 
-  <footer class="bg-light text-center py-3">
+  <footer class="custom-footer text-center py-3">
     <div class="container">
       <p class="mb-2">© 2025 مجله تحلیلی ثانیه - تمامی حقوق محفوظ است.</p>
-      <a href="https://github.com/kaasraarabi/Regression-Analysis" target="_blank" class="text-dark" title="منبع کد پروژه">
-        <i class="bi bi-github fs-4"></i>
+      <a href="https://github.com/kaasraarabi/Regression-Analysis" target="_blank" class="github-icon" title="منبع کد پروژه">
+        <i class="bi bi-github"></i>
       </a>
     </div>
   </footer>

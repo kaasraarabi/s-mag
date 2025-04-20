@@ -5,25 +5,94 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>مجله ثانیه</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  <link rel="icon" href="logo.jpeg" type="image/jpeg">
+  <link rel="stylesheet" href="fonts/Yekan.css">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    * {
+      font-family: 'Yekan', Tahoma, sans-serif;
+    }
+    .team-names {
+      text-align: left;
+      font-size: 1.0rem;
+      line-height: 1.5;
+    }
+    /* Enhanced heading styles */
+    h2 {
+      font-size: 2.25rem !important;
+      font-weight: 700 !important;
+      color: #0056b3 !important;
+      padding-bottom: 0.5rem;
+      margin-top: 2rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid #0056b3;
+    }
+    h3 {
+      font-size: 1.75rem !important;
+      font-weight: 600 !important;
+      color: #0069d9 !important;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    h4 {
+      font-size: 1.4rem !important;
+      font-weight: 600 !important;
+      color: #0077e6 !important;
+      margin-top: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+    strong {
+      font-size: 1.1rem;
+      color: #0056b3;
+    }
+    .box {
+      border: 1px solid #dee2e6;
+      border-right: 4px solid #0056b3;
+      border-radius: 8px;
+      padding: 1.25rem;
+      margin-bottom: 1.5rem;
+      background-color: #f8f9fa;
+    }
+    .box h3 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      color: #0056b3 !important;
+    }
+  </style>
 </head>
 <body>
-  <header class="bg-primary text-white py-4 mb-4">
-    <div class="container d-flex align-items-center">
-      <div class="logo-placeholder me-3">
-        <!-- TODO: insert logo image -->
-        <img src="logo.jpeg" alt="logo" class="img-fluid" style="max-height:60px;">
+  <header class="bg-primary text-white py-4 mb-4 sticky-header">
+    <div class="container d-flex align-items-center justify-content-between" dir="rtl">
+      <div class="d-flex align-items-center">
+        <div class="logo-placeholder me-4">
+          <img src="logo.jpeg" alt="logo" class="img-fluid" style="max-height:100px;">
+        </div>
+        <div class="me-3">
+          <h1 class="h2 mb-0">مجله تحلیلی ثانیه</h1>
+          <p class="lead mb-0">دقیق‌تر از دقیقه</p>
+        </div>
       </div>
-      <div>
-        <h1 class="h2 mb-0">مجله ثانیه</h1>
-        <p class="lead mb-0">دقیق‌تر از دقیقه</p>
+      <div class="team-names" dir="ltr">
+        <div>کسری عربی</div>
+        <div>محمدپارسا الهی منش</div>
+        <div>محمدباقر برکند</div>
       </div>
     </div>
   </header>
-
+  
   <main class="container">
     <section class="mb-5">
-      <h2 class="mb-3">ترافیک کلی استان‌ها</h2>
+      <h2 class="mb-3">مقدمه</h2>
+      <p>
+        در این تحلیل، با توجه به فقدان روش‌های مؤثر برای شناسایی مقاصد گردشگری در کشور، بر آن شدیم تا با رویکردی جامع به بررسی این موضوع بپردازیم. در گام‌های ابتدایی، با تحلیل‌های پایه به شناسایی مقاصد سفر، الگوهای مسافرتی و حجم تردد مسافران می‌پردازیم و در ادامه، با به‌کارگیری اصلاحات تدریجی در رویکرد، به تحلیلی کامل‌تر و جامع‌تر خواهیم رسید.
+      </p>
+    </section>
+
+    <section class="mb-5">
+      <h2 class="mb-3">نمودار دایره‌ای ترافیک ورودی و خروجی استان‌ها
+      </h2>
       <div class="row">
         <div class="col-md-6 mb-4">
           <h4>ترافیک کل</h4>
@@ -38,27 +107,221 @@
           </div>
         </div>
       </div>
-      <p class="mt-2">نمودار دایره‌ای ترافیک استان‌ها و نرمال‌شده بر اساس جمعیت.</p>
+      <p>
+        <strong>توضیح روش:</strong> در این روش، مجموع ترددهای ورودی و خروجی هر استان طی یک بازه زمانی مشخص محاسبه شده و به‌صورت دو نمودار دایره‌ای نمایش داده می‌شود: یکی بر اساس مقدار خام تردد و دیگری نرمال‌شده نسبت به جمعیت استان. نرمال‌سازی امکان مقایسه منصفانه‌تر بین استان‌ها با جمعیت‌های متفاوت را فراهم می‌سازد.
+      </p>
+      <p>
+        <strong>کاربرد در گردشگری:</strong> افزایش حجم کلی تردد می‌تواند به‌عنوان یک شاخص اولیه برای جذب گردشگر در نظر گرفته شود، چرا که معمولاً ورود مسافران منجر به افزایش رفت‌وآمد در منطقه می‌شود.
+
+      </p>
+      <p>
+        <strong>محدودیت‌ها:</strong> این شاخص علاوه بر به حساب آوردن شهرهای میانی، شامل تمامی انواع سفر، از جمله سفرهای کاری، روزمره یا با اهداف غیرگردشگری نیز می‌شود. بنابراین تفکیک دقیق گردشگران از دیگر مسافران ممکن نیست و باید این موضوع در تحلیل‌ها مد نظر قرار گیرد.
+      </p>
     </section>
 
     <section class="mb-5">
-      <h2 class="mb-3">گزارش ورودی‌های نیمی‌سالی شهرها</h2>
+      <h2 class="mb-3">نمودار تغییرات ورودی به شهرها در بازه‌های شش‌ماهه
+      </h2>
       <div class="ratio ratio-16x9">
         <iframe src="results/city_entries_6M.html" frameborder="0"></iframe>
       </div>
-      <p class="mt-2">نمودار تغییرات ورودی‌ها به شهرها در بازه‌های شش‌ماهه.</p>
+      <p>
+        <strong>توضیح روش:</strong> در این تحلیل، تعداد ورودی افراد به هر شهر در بازه‌های شش‌ماهه ثبت شده و به‌صورت نمودار زمانی نمایش داده می‌شود. این رویکرد امکان بررسی روندهای فصلی و تغییرات در حجم تردد را فراهم می‌سازد.
+
+      </p>
+      <p>
+        <strong>کاربرد در گردشگری:</strong> با استفاده از این روش، می‌توان تغییرات فصلی در میزان سفرها را رصد کرد و زمان‌های اوج یا رکود گردشگری را شناسایی نمود؛ برای مثال، افزایش ورودی در فصل تابستان می‌تواند نشانه‌ای از رشد گردشگری تفریحی در آن دوره باشد.
+
+
+      </p>
+      <p>
+        <strong>محدودیت‌ها:</strong> این شاخص تنها ورود افراد به شهر را نشان می‌دهد، بدون آن‌که بتواند اهداف سفر را مشخص کند؛ در نتیجه، نمی‌توان به‌طور دقیق تشخیص داد که چه میزان از ترددها مربوط به گردشگران واقعی است. همچنین در برخی موارد، ورود ثبت‌شده ممکن است ناشی از عبور ترانزیتی، تعویض مسیر، یا توقف‌های کوتاه باشد که لزوماً به معنی سفر به مقصد آن شهر نیست و می‌تواند در تحلیل نهایی ایجاد انحراف کند. 
+      </p>
     </section>
+    
     <section class="mb-5">
-      <h2 class="mb-3">عدم تعادل ورودی‌ و خروجی</h2>
+      <h2 class="mb-3">نمودار تفاضل ورودی و خروجی شهرها
+      </h2>
       <div class="ratio ratio-16x9">
         <iframe src="results/imbalance.html" frameborder="0"></iframe>
       </div>
-      <p class="mt-2">نمودار smoothed imbalance بین ورودی و خروجی شهرها.</p>
+      <p>
+        <strong>توضیح روش:</strong> توضیح روش:
+        در این رویکرد، اختلاف تعداد ورودی‌ها و خروجی‌ها برای هر شهر محاسبه می‌شود تا مناطق با خالص ورود یا خروج مسافر شناسایی شوند. این تحلیل تصویری از جابه‌جایی نسبی جمعیت در سطح شهرها ارائه می‌دهد.        
+      </p>
+      <p>
+        <strong>کاربرد در گردشگری:</strong> مقادیر مثبت می‌توانند نشان‌دهنده ورود خالص گردشگران و افزایش موقت جمعیت در یک شهر باشند؛ به‌ویژه در مناطق گردشگرپذیر که در دوره‌هایی خاص شاهد افزایش مسافران هستند.
+
+      </p>
+      <p>
+        <strong>محدودیت‌ها:</strong> این شاخص نرمال‌سازی نشده و تحت تأثیر مستقیم اندازه جمعیت و حجم کلی تردد هر شهر قرار دارد. همچنین به‌دلیل حساسیت بالا، خطاهای کوچک در داده‌های ورودی می‌توانند تأثیر چشم‌گیری در نتایج نهایی داشته باشند و تفسیر نمودار را دشوار کنند.
+      </p>
+    </section>
+    
+    <section class="mb-5">
+      <h2 class="mb-3">نقشه‌های کلاسترینگ مراکز استان‌ها</h2>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <h4>سال ۱۳۹۸</h4>
+          <div class="ratio ratio-1x1">
+            <img src="results/1398_cluster.png" class="img-fluid" alt="کلاسترینگ ۱۳۹۸">
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <h4>سال ۱۳۹۹</h4>
+          <div class="ratio ratio-1x1">
+            <img src="results/1399_cluster.png" class="img-fluid" alt="کلاسترینگ ۱۳۹۹">
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <h4>سال ۱۴۰۰</h4>
+          <div class="ratio ratio-1x1">
+            <img src="results/1400_cluster.png" class="img-fluid" alt="کلاسترینگ ۱۴۰۰">
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <h4>سال ۱۴۰۱</h4>
+          <div class="ratio ratio-1x1">
+            <img src="results/1401_cluster.png" class="img-fluid" alt="کلاسترینگ ۱۴۰۱">
+          </div>
+        </div>
+      </div>
+      <p>
+        <strong>توضیح روش:</strong> برای هر مرکز استان، یک بردار ۲۴‌بعدی شامل مجموع ترددهای ورودی و خروجی ماهانه (۱۲ ماه × ۲) ساخته می‌شود. پس از نرمال‌سازی این بردارها برای حذف اثر مقیاس، استان‌هایی با الگوهای زمانی مشابه تردد، با استفاده از الگوریتم‌های خوشه‌بندی در گروه‌هایی مشترک قرار می‌گیرند. نتیجه به‌صورت نقشه‌هایی از گروه‌های مشابه نمایش داده می‌شود.
+      </p>
+      <p>
+        <strong>کاربرد در گردشگری:</strong> استان‌هایی که در یک گروه قرار می‌گیرند، احتمالاً از نظر الگوی زمانی تردد (فصلی یا ماهانه) مشابه یکدیگر هستند. این می‌تواند نشان‌دهنده شباهت در رفتار گردشگری، فصل‌های اوج سفر یا نوع جذب مسافر باشد و به طراحی سیاست‌های منطقه‌ای کمک کند.
+      </p>
+      <p>
+        <strong>محدودیت‌ها:</strong> از آن‌جا که تمام بردارها نرمال‌سازی شده‌اند، حجم واقعی تردد در تحلیل لحاظ نمی‌شود؛ در نتیجه، استان‌های پرتردد و کم‌تردد ممکن است در یک گروه قرار گیرند. بنابراین این روش برای شناسایی مقاصد اصلی گردشگری مناسب نیست، بلکه صرفاً الگوهای زمانی تردد را مقایسه می‌کند.
+      </p>
+    </section>
+    
+    <section class="mb-5">
+      <h2 class="mb-3">میانگین تردد استان‌ها</h2>
+      <div class="ratio ratio-16x9">
+        <iframe src="results/Taverage.html" frameborder="0"></iframe>
+      </div>
+      <p>
+        <strong>توضیح روش:</strong> در این نقشه، میانگین تردد در استان‌های مختلف کشور نمایش داده شده است. رنگ‌های متفاوت نشان‌دهنده سطوح مختلف تردد در هر منطقه است.
+      </p>
+    </section>
+    
+    <section class="mb-5">
+      <h2 class="mb-3">میانه تردد استان‌ها</h2>
+      <div class="ratio ratio-16x9">
+        <iframe src="results/Tmedian.html" frameborder="0"></iframe>
+      </div>
+      <p>
+        <strong>توضیح روش:</strong> در این نقشه، میانه تردد در استان‌های مختلف کشور نمایش داده شده است. استفاده از میانه به جای میانگین می‌تواند تصویر دقیق‌تری از وضعیت معمول تردد ارائه دهد، زیرا میانه کمتر تحت تأثیر داده‌های پرت قرار می‌گیرد.
+      </p>
+    </section>
+    
+    <section class="mb-5">
+      <h2 class="mb-3">درصد تردد استان‌ها</h2>
+      <div class="ratio ratio-16x9">
+        <iframe src="results/Tpercent.html" frameborder="0"></iframe>
+      </div>
+      <p>
+        <strong>توضیح روش:</strong> این نقشه، درصد تردد هر استان نسبت به کل تردد کشور را نشان می‌دهد. با این روش می‌توان سهم هر استان در جذب و تولید سفر را به صورت نسبی مشاهده کرد.
+      </p>
+    </section>
+    
+    <section class="mb-5">
+      <h2 class="mb-3">روش تحلیل</h2>
+      
+      <div class="box mb-4">
+        <h3>روش پایه</h3>
+        <p>
+            <strong>ارزش توریستی = (میانگین زمان خروجی‌ها) − (میانگین زمان ورودی‌ها)</strong><br>
+            محاسبه اختلاف مدت زمان اقامت بین دو گروه:
+        </p>
+        
+        <div>
+            <strong>گردشگران ورودی:</strong>
+            افراد ساکن در <u>شهرهای دیگر</u> که به شهر مورد نظر سفر می‌کنند.
+        </div>
+        
+        <div>
+            <strong>گردشگران خروجی:</strong>
+            ساکنان شهر مورد نظر که به <u>شهرهای دیگر</u> سفر می‌کنند و زمان خود را آنجا می‌گذرانند.
+        </div>
+      </div>
+
+      <div class="box mb-4">
+        <h3>بازه‌های نرمال چیست؟</h3>
+        <ul>
+            <li>روزهای عادی (مثلاً دوشنبه‌ها) که <u>در شروع و پایان آنها تعطیلی وجود ندارد</u>.</li>
+            <li>زمانی که انتظار می‌رود اکثر مردم در <u>مکان اصلی سکونت</u> خود باشند.</li>
+            <li>تحلیل داده‌ها فقط در این بازه‌ها انجام می‌شود تا تأثیر عوامل موقت حذف شود.</li>
+        </ul>
+      </div>
+
+      <div class="box mb-4">
+        <h3>نسخه دقیق‌تر</h3>
+        <ul>
+            <li><strong>حذف داده‌های نامتعادل:</strong>
+                نادیده گرفتن بازه‌هایی که تعداد ورودی یا خروجی به شدت بیشتر از دیگری است.
+            </li>
+            
+            <li><strong>تمرکز بر داده‌های معتبر:</strong>
+                فقط شهرهایی بررسی می‌شوند که <u>داده‌های کافی</u> از روزهای مختلف داشته باشند.
+            </li>
+            
+            <li><strong>حذف اقامت‌های کوتاه:</strong>
+                فقط بازدیدهایی که بیش از ۱ ساعت در شهر مانده‌اند محاسبه می‌شوند.
+            </li>
+        </ul>
+      </div>
+
+      <div class="box mb-4">
+        <h3>مثال</h3>
+        <p>
+            در یک بازه نرمال:<br>
+            - ۱۲۰۰ گردشگر ورودی: میانگین ۱۲ ساعت در شهر بمانند.<br>
+            - ۹۰۰ گردشگر خروجی: میانگین ۸ ساعت در <u>شهرهای مقصد</u> بمانند.<br>
+            - ارزش توریستی = <strong>+۴</strong> (شهر برای گردشگران ورودی جذاب‌تر است)
+        </p>
+      </div>
+
+      <div class="box mb-4">
+        <h3>چرا این روش دقیق است؟</h3>
+        <ul>
+            <li>مقایسه‌ی هوشمندانه بین رفتار گردشگران ورودی و خروجی.</li>
+            <li>استفاده از بازه‌های زمانی بدون تأثیر تعطیلات.</li>
+            <li>اندازه‌گیری بر اساس <u>زمان واقعی حضور</u> به جای تعداد صرف.</li>
+        </ul>
+      </div>
+    </section>
+    
+    <section class="mb-5">
+      <h2 class="mb-3">مقاصد گردشگری فصلی</h2>
+      <div class="ratio ratio-16x9">
+        <iframe src="results/Season.html" frameborder="0"></iframe>
+      </div>
+      <p>
+        علاوه بر شهرهایی که مشاهده شدند مقاصد گردشگری در کل سال هستند، شهرهایی نیز وجود دارند که تنها به‌صورت فصلی مورد توجه گردشگران قرار می‌گیرند. این مقاصد معمولاً کمتر شناخته‌ شده‌اند و امیدواریم سفر در فصل مناسب به آن‌ها، تجربه‌ای شیرین و متفاوت برایتان رقم بزند.
+      </p>
+    </section>
+    
+    <section class="mb-5">
+      <h2 class="mb-3">منابع</h2>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><a href="https://141.ir/" target="_blank">سامانه اطلاعات راه‌های کشور (۱۴۱)</a></li>
+        <li class="list-group-item"><a href="https://d-mag.ir/" target="_blank">مجله تحلیلی دقیقه</a></li>
+        <li class="list-group-item"><a href="https://www.wikipedia.org/" target="_blank">دانشنامه ویکی‌پدیا</a></li>
+        <li class="list-group-item"><a href="https://exceliran.com/" target="_blank">اکسل ایران</a></li>
+      </ul>
     </section>
   </main>
 
   <footer class="bg-light text-center py-3">
-    <p class="mb-0">© 2025 مجله ثانیه - تمامی حقوق محفوظ است.</p>
+    <div class="container">
+      <p class="mb-2">© 2025 مجله تحلیلی ثانیه - تمامی حقوق محفوظ است.</p>
+      <a href="https://github.com/kaasraarabi/Regression-Analysis" target="_blank" class="text-dark" title="منبع کد پروژه">
+        <i class="bi bi-github fs-4"></i>
+      </a>
+    </div>
   </footer>
 
 </body>
